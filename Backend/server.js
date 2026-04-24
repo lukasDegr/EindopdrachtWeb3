@@ -6,6 +6,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/users",require("./routers/users"));
-app.listen(3001, () =>{
-    console.log("server draait op poort 3001");
-})
+const PORT = 3001;
+app.listen(PORT, () => {
+    console.log(`Server draait op http://localhost:${PORT}`);
+});
