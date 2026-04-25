@@ -9,7 +9,7 @@ router.get("/",(req,res) =>{
 });
 router.post("/",(req,res) =>{
     const {naam} = req.body;
-    const sql = "INSERT INTO vliegtuig VALUES (?)";
+    const sql = "INSERT INTO vliegtuig(naam) VALUES (?)";
     db.query(sql,[naam],(err,result) =>{
         if (err) {
             console.error("DATABASE FOUT:", err);
@@ -18,4 +18,18 @@ router.post("/",(req,res) =>{
         res.status(201).json({id: result.insertId,naam})
     })
 })
+
+router.put("/:id", (req, res) => {
+    const { naam} = req.body;
+    const id = req.params.id;
+    const sql = "UPDATE vliegtuig SET naam = ? WHERE id = ?";
+    db.query(sql, [naam, id], (err, result) => {
+        if (err) {
+            console.error("Error updating vliegtuig:", err);
+            res.status(500).json({ message: "Error updating vliegtuig" });
+        } else {
+            res.json({ id, naam});
+        }
+    });
+});
 module.exports = router;
