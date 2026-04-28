@@ -8,12 +8,16 @@ import AdminPage from './pages/AdminPage.tsx'
 import VluchtPage from './pages/VluchtPage.tsx'
 import RekeningPage from './pages/RekeningPage.tsx'
 import VliegtuigPage from './pages/VliegtuigPage.tsx'
+import LoginPage from './pages/LoginPage.tsx'
 
 const browserRouter = createBrowserRouter([
   {
-      path: "/",
+    path: "/",
+    element: <LoginPage></LoginPage>
+  },
+  {
+      path: "/beginPage",
       element: <BeginPage></BeginPage>,
-      
   },
   {
       path: "/AdminPage",
@@ -27,9 +31,11 @@ const browserRouter = createBrowserRouter([
     path: "/RekeningPage",
     element: <RekeningPage></RekeningPage>
   },
-  {path: "/VliegtuigPage",
-  element: <VliegtuigPage></VliegtuigPage>
-  }
+  {
+    path: "/VliegtuigPage",
+    element: <VliegtuigPage></VliegtuigPage>
+  },
+  
 ]);
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

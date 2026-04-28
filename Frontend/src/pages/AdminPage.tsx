@@ -97,14 +97,6 @@ const AdminPage = () => {
           console.error("Error updating user:", error);
 
         }
-        // const updatedGebruikers = gebruikers.map((gebruiker) => gebruiker.id === selectedGebruiker.id 
-        // ? { ...gebruiker, naam: editNaam, email: editEmail, admin: editAdmin } : gebruiker
-        // );
-        // setGebruikers(updatedGebruikers);
-
-        // const updatedSelected = updatedGebruikers.find((gebruiker) =>gebruiker.id === selectedGebruiker.id) || null;
-        // setSelectedGebruiker(updatedSelected);
-        // setEditMode(false);
     }
    
 

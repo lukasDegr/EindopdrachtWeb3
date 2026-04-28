@@ -5,29 +5,34 @@ const Header = () => {
         <header className="bg-gray-800 text-white p-4">
             <NavLink 
                 className={({ isActive }) =>
-                 isActive ? "px-3 py-2 rounded bg-gray-700" : "px-3 py-2 rounded hover:bg-gray-700"} to="/">
-                    Home
+                isActive ? "px-3 py-2 rounded bg-gray-700" : "px-3 py-2 rounded hover:bg-gray-700"} to="/BeginPage">
+                Home
             </NavLink>
             <NavLink 
                 className={({ isActive }) =>
-                 isActive ? "px-3 py-2 rounded bg-gray-700" : "px-3 py-2 rounded hover:bg-gray-700"} to="/AdminPage">
+                isActive ? "px-3 py-2 rounded bg-gray-700" : "px-3 py-2 rounded hover:bg-gray-700"} to="/AdminPage">
                 Admin
             </NavLink>
             <NavLink
                 className={({ isActive }) =>
-                 isActive ? "px-3 py-2 rounded bg-gray-700" : "px-3 py-2 rounded hover:bg-gray-700"} to="/VluchtPage">
+                isActive ? "px-3 py-2 rounded bg-gray-700" : "px-3 py-2 rounded hover:bg-gray-700"} to="/VluchtPage">
                 Vluchten
             </NavLink>
             <NavLink
                 className={({ isActive }) =>
-                 isActive ? "px-3 py-2 rounded bg-gray-700" : "px-3 py-2 rounded hover:bg-gray-700"} to="/RekeningPage">
+                isActive ? "px-3 py-2 rounded bg-gray-700" : "px-3 py-2 rounded hover:bg-gray-700"} to="/RekeningPage">
                 Rekeningen
             </NavLink>
             <NavLink
                 className={({ isActive }) =>
-                 isActive ? "px-3 py-2 rounded bg-gray-700" : "px-3 py-2 rounded hover:bg-gray-700"} to="/VliegtuigPage">
+                isActive ? "px-3 py-2 rounded bg-gray-700" : "px-3 py-2 rounded hover:bg-gray-700"} to="/VliegtuigPage">
                 Vliegtuigen
             </NavLink>
+            {/* <NavLink
+                className={({isActive}) =>
+                isActive ? "px-3 py-2 rounded bg-gray-700" : "px-3 py-2 rounded hover:bg-gray-700"} to="/">
+                Login
+            </NavLink> */}
         </header>
     );
 }
